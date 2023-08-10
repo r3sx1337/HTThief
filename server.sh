@@ -24,6 +24,8 @@ if /etc/init.d/apache2 status | grep running; then
         echo "Have you runned the client script? (yes or no)?"
         read answer
 
+        # Checking if everything is ok to proceed
+
         case $answer in
                 yes)
                         ### Manipulating the data row received
