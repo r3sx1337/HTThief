@@ -45,6 +45,7 @@ echo " "
 echo "Doing the magic ;)"
 ### doing same magic... preparing file to be sent...
 for i in $(cat $FILE); do
+        # Change to your domain
         echo "http://localhost/$i" >> /tmp/ax0a.txt
 done
 
