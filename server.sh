@@ -33,6 +33,8 @@ if /etc/init.d/apache2 status | grep running; then
                         ### Transforming the data row received on a final file
                         cat received.txt | base64 -d > final.txt
                         echo "Done!"
+                        echo " "
+                        echo "Don't forget to rename your file to original extension before use it."
                         ;;
                 no)
                         echo "Run again..."
