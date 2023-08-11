@@ -14,4 +14,24 @@ HTThief differs from the others because it encodes the raw file data in Base64 a
 
 # Tutorial
 
+HTThief is based on two scripts, one to be executed on the server/attacker machine (who will receive the file) and another on the client (machine that will send the file):
+
+```
+┌──(kali㉿kali)-[~/HTThief]
+└─$ ls -l
+total 8
+-rwxr-xr-x 1 kali kali 2681 Aug 10 09:13 client.sh
+-rwxr-xr-x 1 kali kali  846 Aug 10 09:11 server.sh
+
+```
+
+After choosing the file to be sent, first you must run server.sh on the attacking machine:
+
+![h1](https://github.com/V1n1v131r4/HTThief/assets/1153876/48c9c3eb-250b-429d-9b0a-9af753e87709)
+
+
+
+
+
+
 # Requires
