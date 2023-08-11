@@ -31,10 +31,22 @@ How HTThief works is based on two assumptions:
     tr -s '[:space:]' '\n' < /tmp/ax0c.txt > /tmp/ax0d.txt
     FILE="/tmp/ax0d.txt"
     ```
-By default base64 will generate strings of 76 characters with a nullbyte (which in ASCII is understood as a space) at the end, instead of a new line. HTThief takes advantage of this to replace these spaces with new lines by means of ```tr -s``` and send the HTTP GET of each line of the encoded file, that is, pieces of 76 characters. 
+By default base64 will generate strings of 76 characters with a nullbyte (which in ASCII is understood as a space) at the end, instead of a new line. 
 
+![h6](https://github.com/V1n1v131r4/HTThief/assets/1153876/3101f83d-7996-4175-b9f3-9674db554c8c)
+
+HTThief takes advantage of this to replace these spaces with new lines by means of ```tr -s``` and send the HTTP GET of each line of the encoded file, that is, pieces of 76 characters.
+
+```
+tr -s '[:space:]' '\n' < /tmp/ax0c.txt > /tmp/ax0d.txt
+```
 
 That way, even if there is some soul that decodes during tracing, this piece of code could not be identified as the original file.
+
+```
+tr -s '[:space:]' '\n' < /tmp/ax0c.txt > /tmp/ax0d.txt
+```
+
 
 # Tutorial
 
