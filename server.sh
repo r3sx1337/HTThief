@@ -38,9 +38,15 @@ if /etc/init.d/apache2 status | grep running; then
                         echo "Done!"
                         echo " "
                         echo "The exfiltrated content was downloaded to the file loot.dump" 
-                        echo "Don't forget to rename your file to the original extension before using it."
                         echo -n "The file loot.dump is "
                         file ./loot.dump
+                        echo " "
+                        echo "What is the original extension of the file?"
+                        read extension
+                        mv loot.dump final.$extension
+                        echo " "
+                        echo "Enjoy your file ;)"
+
                         
                         ;;
                 no)
