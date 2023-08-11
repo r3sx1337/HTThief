@@ -12,6 +12,27 @@ HTThief differs from the others because it encodes the raw file data in Base64 a
 
 # How it works?
 
+How HTThief works is based on two assumptions: 
+
+1) encode the file in base64 to be sent; and
+   
+    ```
+    ### encoding the file
+    echo "Enconding the file..."
+    ENCODED=$(base64 $path)
+    echo $ENCODED > /tmp/ax0c.txt
+    ```
+    
+2) divide it into pieces to make it difficult to decode the file during sending
+   
+    ```
+    ### organizing the file
+    echo "Organizating the file..."
+    tr -s '[:space:]' '\n' < /tmp/ax0c.txt > /tmp/ax0d.txt
+    FILE="/tmp/ax0d.txt"
+    ```
+
+
 # Tutorial
 
 HTThief is based on two scripts, one to be executed on the server/attacker machine (who will receive the file) and another on the client (machine that will send the file):
