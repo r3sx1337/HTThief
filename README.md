@@ -2,8 +2,10 @@
 
 This tool was developed with the intention of serving as a (simple but effective) way to transfer files protected by DLP, E/XDR and etc (exfiltration) in a stealthy way. Convert any type of file (eg executables, Office, Zip, images) into URLs and send them via simple GET.
 
+
 # Author
 Vinicius Vieira
+
 
 # Why is this different from every other HTTP exfiltration technique?
 
@@ -54,6 +56,8 @@ That way, even if there is some soul that decodes during tracing, this piece of 
 127.0.0.1 - - [11/Aug/2023:08:51:38 -0400] "GET /AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEB/8AAEQgDIAMg HTTP/1.1" 404 432 "-" "curl/7.88.1"
 ```
 
+
+
 # Usage
 
 The use of HTThief is simple:
@@ -100,6 +104,8 @@ At the end of receiving, choose the original extension of the file so that it is
 ![h4](https://github.com/V1n1v131r4/HTThief/assets/1153876/86d891d5-5aa2-45a0-93d2-781ac72f7277)
 
 
+
+
 # Do you want to use in a Windows environment?
 
  
@@ -108,4 +114,14 @@ Although HTThief is written in Shell Script, it can be easily used by any user w
 ![WhatsApp Image 2023-08-12 at 12 14 01](https://github.com/V1n1v131r4/HTThief/assets/1153876/934c839c-dc5e-47e0-ae07-c033a3319eb1)
 
 
+
+
 # Requires
+
+On attacker (server) machine you will need the Apache2 installed.
+
+
+
+#To Do
+
+- replace Apache2 requirenment to Go wbserver.
