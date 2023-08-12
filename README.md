@@ -79,8 +79,11 @@ On the target machine, run client.sh and fill in the absolute path of the file t
 ![h2](https://github.com/V1n1v131r4/HTThief/assets/1153876/d708c3de-0553-49c5-9319-fde9c393f906)
 
 
-After sending the file, go back to the attacking machine, type "yes" for the script flow to end.
+After sending the file and **you got the "Done!" response**, go back to the attacking machine, type "yes" for the script flow to end.
+
+**WARNING**: The larger the file, the longer the upload process takes. Be patient and wait until it is fully shipped
 At the end of receiving, choose the original extension of the file so that it is originally reassembled on the attacking machine.
+
 
 ![h3](https://github.com/V1n1v131r4/HTThief/assets/1153876/e3a3f84d-3f13-4908-acf9-26d5766edcb0)
 
