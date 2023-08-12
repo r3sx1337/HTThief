@@ -82,20 +82,21 @@ total 8
 
 ```
 
-After choosing the file to be sent, first you must run server.sh on the attacking machine:
+After choosing the file to be sent, first you must run ```server.sh``` on the attacking machine:
 
 ![h1](https://github.com/V1n1v131r4/HTThief/assets/1153876/48c9c3eb-250b-429d-9b0a-9af753e87709)
 
 
 
-On the target machine, run client.sh and fill in the absolute path of the file that should be sent:
+On the target machine, run ```client.sh``` and fill in the absolute path of the file that should be sent:
 
 ![h2](https://github.com/V1n1v131r4/HTThief/assets/1153876/d708c3de-0553-49c5-9319-fde9c393f906)
 
 
 After sending the file and **you got the "Done!" response**, go back to the attacking machine, type "yes" for the script flow to end.
 
-**WARNING**: The larger the file, the longer the upload process takes. Be patient and wait until it is fully shipped
+**WARNING**: The larger the file, the longer the upload process takes. Be patient and wait until it is fully shipped.
+
 At the end of receiving, choose the original extension of the file so that it is originally reassembled on the attacking machine.
 
 
