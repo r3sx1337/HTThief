@@ -54,6 +54,9 @@ That way, even if there is some soul that decodes during tracing, this piece of 
 127.0.0.1 - - [11/Aug/2023:08:51:38 -0400] "GET /AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEB/8AAEQgDIAMg HTTP/1.1" 404 432 "-" "curl/7.88.1"
 ```
 
+# Usage
+
+
 
 # Tutorial
 
@@ -88,6 +91,14 @@ At the end of receiving, choose the original extension of the file so that it is
 ![h3](https://github.com/V1n1v131r4/HTThief/assets/1153876/e3a3f84d-3f13-4908-acf9-26d5766edcb0)
 
 ![h4](https://github.com/V1n1v131r4/HTThief/assets/1153876/86d891d5-5aa2-45a0-93d2-781ac72f7277)
+
+
+# Do you want to use in a Windows environment?
+
+ 
+Although HTThief is written in Shell Script, it can be easily used by any user who has access to WSL in a Windows environment. Just copy the client.sh to the Linux distribution running on WSL and run it, pointing to the file you want to exfiltrate from the Windows environment.
+
+![WhatsApp Image 2023-08-12 at 12 14 01](https://github.com/V1n1v131r4/HTThief/assets/1153876/934c839c-dc5e-47e0-ae07-c033a3319eb1)
 
 
 # Requires
