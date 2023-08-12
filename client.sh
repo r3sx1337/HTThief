@@ -68,7 +68,7 @@ FILE2="/tmp/ax0a.txt"
 echo "$FILE2"
 
 while read -r j; do
-    curl "$j"
+    curl -j "$j" 2>/dev/null
 done < "$FILE2"
 
 echo " "
