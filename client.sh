@@ -60,7 +60,7 @@ for i in $(cat "$FILE"); do
     echo "http://$url_parameter/$i" >> /tmp/ax0a.txt
 done
 
-echo "Send the file..."
+echo "Send the file... please, wait until finish!!!"
 echo " "
 
 # Process the URLs
