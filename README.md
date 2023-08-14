@@ -1,6 +1,6 @@
 # HTThief
 
-This tool was developed with the intention of serving as a (simple but effective) way to transfer files protected by DLP, E/XDR and etc (exfiltration) in a stealthy way. Convert any type of file (eg executables, Office, Zip, images) into URLs and send them via simple GET.
+HTThief was developed by me and it's not just another tool - it improves a unexplored data exfiltration technique, with the intention of serving as a (simple but effective) way to transfer files protected by DLP, E/XDR and etc (exfiltration) in a stealthy way. Convert any type of file (eg executables, Office, Zip, images) into URLs and send them via simple HTTP GET.
 
 
 # Author
@@ -9,10 +9,13 @@ Vinicius Vieira
 
 # Why is this different from every other HTTP exfiltration technique?
 
-The most common data exfiltration techniques via HTTP are based on file upload (encrypted or not). These techniques can be easily detected, either by anomalous behavior of the endpoint (uploading a file on an unknown website) or even by traffic (through DLP, for example), as well as being easily mitigated.
-HTThief differs from the others because it encodes the raw file data in Base64 and divides it into small strings, which are passed via URL to the server. Each GET calls the attacker's IP/domain plus a chunk of base64 as part of the requested address.  Obviously the address does not exist in the destination, however the behavior of the target machine is similar to a user accessing a certain resource on a website and not uploading a file.
+The most common data exfiltration techniques via HTTP are based on POST method (uploding files, encrypted or not). These techniques can be easily detected, either by anomalous behavior of the endpoint (uploading a file on an unknown website, for example) or even by traffic (through DLP, IDS/IPS for example), as well as being easily mitigated.
 
-This makes detection and mitigation very difficult, because through the process of steganography of the file in URLs, it becomes very dificult to detect that each one is actually a piece of a certain file.
+HTThief differs from the others because it encodes the raw file data in Base64 and divides it into small strings, which are passed using the GET method to the server instead of POST. Each GET calls the attacker's IP/domain plus a chunk of base64 as part of the requested address. Obviously the address does not exist in the destination, however the behavior of the client machine is similar to a user accessing a certain resource on a website rather then uploading a file.
+
+On the server side, HTThief collects logs from received GETs, processes the data and reassembles the file in its original form.
+
+This makes detection and mitigation very difficult, because through this process of steganography of the file in many URLs, it becomes very dificult to detect that each one is actually a piece of a certain file.
 
 # How it works?
 
