@@ -38,7 +38,7 @@ How HTThief works is based on two assumptions:
     tr -s '[:space:]' '\n' < /tmp/ax0c.txt > /tmp/ax0d.txt
     FILE="/tmp/ax0d.txt"
     ```
-By default base64 will generate strings of 76 characters with a nullbyte (which in ASCII is understood as a space) at the end, instead of a new line. 
+By default base64 will generate strings of 76 characters with a nullbyte (which in ASCII is understood as a space) at the end, instead of a new line (see RFC2045 and Base64 manpage). 
 
 ![h6](https://github.com/V1n1v131r4/HTThief/assets/1153876/4612fce1-19e5-4d74-90de-cb117e493545)
 
